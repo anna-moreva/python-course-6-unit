@@ -1,0 +1,12 @@
+class Road():
+    def __init__(self, lenght, width):
+        self._lenght = lenght
+        self._width = width
+
+    def asf(self):
+        m = self._lenght * self._width * 25  * 5
+        print()
+        print(f'масса - {int(m / 1000)} т')
+
+r_1 = Road(int(input('введите длину в м - ')), int(input('введите ширину в м - ')))
+r_1.asf()
