@@ -1,0 +1,71 @@
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = bool(is_police)
+
+    def go(self):
+        print(f'{self.name} has started to go')
+
+    def stop(self):
+        print(f'{self.name} has stopped')
+
+    def turn(self, direction):
+        print(f'{self.name} has turned to the {direction}')
+
+    def show_speed(self):
+        print(f'speed is {self.speed} km/h')
+
+
+class TownCar(Car):
+    name = 'BMW'
+    speed = 80
+    is_police = False
+    color = 'black'
+
+    def show_speed(self):
+        print(f'speed is {self.speed} km/h')
+        print()
+        if self.speed > 60:
+            print('OVERSPEED!!!!!')
+
+
+class WorkCar(Car):
+    name = 'Cat'
+    speed = 40
+    is_police = False
+    color = 'grey'
+
+    def show_speed(self):
+        print(f'speed is {self.speed} km/h')
+        print()
+        if self.speed > 40:
+            print('OVERSPEED!!!!!')
+
+
+class SportCar(Car):
+    name = 'Audi'
+    speed = 120
+    is_police = False
+    color = 'red'
+
+
+class PoliceCar(Car):
+    name = 'Mersedez'
+    speed = 100
+    is_police = True
+    color = 'white'
+
+
+car_1 = PoliceCar
+car_1.stop(PoliceCar)
+car_1.show_speed(PoliceCar)
+print()
+car_1.go(PoliceCar)
+car_1.show_speed(PoliceCar)
+car_1.turn(PoliceCar, 'right')
+
+# car_2 = TownCar
+# car_2.go(TownCar)
+# car_2.show_speed(TownCar)
