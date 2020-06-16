@@ -1,0 +1,23 @@
+from time import sleep
+
+class TrafficLight():
+    def __init__(self, color):
+        self.__color = color
+
+    def running(self):
+        while True:
+            print(f"\033[31m {t_1.__color}")
+            sleep(7)
+            print(f"\033[33m {t_2.__color}")
+            sleep(2)
+            print(f"\033[36m {t_3.__color}")
+            sleep(7)
+            print(f"\033[33m {t_2.__color}")
+            sleep(2)
+
+t_1 = TrafficLight('red')
+t_2 = TrafficLight('yellow')
+t_3 = TrafficLight('green')
+t_1.running()
+t_2.running()
+t_3.running()
