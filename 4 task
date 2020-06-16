@@ -19,10 +19,7 @@ class Car:
 
 
 class TownCar(Car):
-    name = 'BMW'
-    speed = 80
-    is_police = False
-    color = 'black'
+    pass
 
     def show_speed(self):
         print(f'speed is {self.speed} km/h')
@@ -32,10 +29,7 @@ class TownCar(Car):
 
 
 class WorkCar(Car):
-    name = 'Cat'
-    speed = 40
-    is_police = False
-    color = 'grey'
+    pass
 
     def show_speed(self):
         print(f'speed is {self.speed} km/h')
@@ -45,27 +39,17 @@ class WorkCar(Car):
 
 
 class SportCar(Car):
-    name = 'Audi'
-    speed = 120
-    is_police = False
-    color = 'red'
+    pass
 
 
 class PoliceCar(Car):
-    name = 'Mersedez'
-    speed = 100
-    is_police = True
-    color = 'white'
+    pass
 
 
-car_1 = PoliceCar
-car_1.stop(PoliceCar)
-car_1.show_speed(PoliceCar)
-print()
-car_1.go(PoliceCar)
-car_1.show_speed(PoliceCar)
-car_1.turn(PoliceCar, 'right')
+car_1 = PoliceCar(120, 'black', 'Porsche', True)
+car_1.stop()
+print(car_1.is_police)
 
-# car_2 = TownCar
-# car_2.go(TownCar)
-# car_2.show_speed(TownCar)
+car_2 = TownCar(100, 'red', 'Audi', False)
+car_2.go()
+car_2.show_speed()
