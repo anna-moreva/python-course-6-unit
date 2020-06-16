@@ -1,0 +1,25 @@
+class Stationery:
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        print('Запуск отрисовки.')
+
+class Pen(Stationery):
+    pass
+    def draw(self):
+        print(f'Запуск отрисовки ручкой {self.title}.')
+
+
+class Pencil(Stationery):
+    pass
+    def draw(self):
+        print(f'Запуск отрисовки карандашом {self.title}.')
+
+class Handle(Stationery):
+    pass
+    def draw(self):
+        print(f'Запуск отрисовки маркером {self.title}.')
+
+s_1 = Pen('kohinor')  # для чего?????
+s_1.draw()
